@@ -130,9 +130,9 @@ end
 def num_points_scored(player)
 
   game_hash.each do |home_away|
-    home_away.each do |team|
+    game_hash[home_away].each do |team|
       binding.pry
-      team.each do |players|
+      game_hash[home_away][team].each do |players|
 binding.pry
         players.each do |individual|
           if individual[:player_name] == player
